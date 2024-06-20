@@ -124,44 +124,47 @@ button.main-dark-button:hover {
 }
 
 /* 底部页脚样式 */
+
 .footer {
-    background-color: #343a40;
+    background-color: var(--primary-color);
     color: #fff;
     padding: 60px 0;
     text-align: center;
-    width: 100%;
-}
-
-.footer p {
-    margin-bottom: 5px;
-}
-
-.footer i {
-    margin-right: 5px;
-}
-
-.footer .col-md-4 h3 {
+  }
+  
+  .footer h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
-}
-
-.footer .col-md-4 ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.footer .col-md-4 ul li {
-    margin-bottom: 10px;
-}
-
-.footer .col-md-4 ul li a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.footer .col-md-4 ul li a:hover {
-    text-decoration: underline;
-}
+  }
+  
+  .footer p {
+    margin-bottom: 5px;
+  }
+  
+  .footer i {
+    margin-right: 5px;
+  }
+  
+  .footer .fab {
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer .fab:hover {
+    color: var(--secondary-color);
+  }
+  
+  
+  .footer .col-md-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer .col-md-4 a {
+    display: inline-block;
+    margin: 10px 0;
+  }
 
 /* 媒体查询，确保响应式布局 */
 @media (max-width: 768px) {
