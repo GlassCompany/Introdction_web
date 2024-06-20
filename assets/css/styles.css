@@ -1,15 +1,21 @@
-/* styles.css */
+/* 定义全局变量 */
+:root {
+  --primary-color: #343a40;
+  --secondary-color: #c0c0c0;
+  --font-family-sans: 'Arial', sans-serif;
+  --font-family-serif: 'Georgia', serif;
+}
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: var(--font-family-sans);
 }
 
 .navbar {
-  background-color: #343a40 !important;
+  background-color: var(--primary-color) !important;
 }
 
 .navbar-brand {
-  font-family: 'Georgia', serif;
+  font-family: var(--font-family-serif);
   font-size: 1.75rem;
   font-weight: bold;
   color: #ffffff !important;
@@ -19,8 +25,9 @@ body {
   color: #ffffff !important;
 }
 
-.navbar-nav .nav-link:hover {
-  color: #c0c0c0 !important;
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--secondary-color) !important;
 }
 
 .carousel-item {
@@ -35,11 +42,11 @@ body {
 .carousel-caption {
   position: absolute;
   bottom: 20%;
-  text-align: left;
+  text-align: center;
   color: #fff;
 }
 
-.carousel-caption h1 {
+.carousel-caption h5 {
   font-size: 3rem;
   font-weight: bold;
 }
@@ -74,50 +81,32 @@ body {
   margin-bottom: 40px;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 450px; /* 增加卡片高度 */
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 250px; /* 增加图片高度 */
+}
+
+.card-body {
+  flex-grow: 1;
+}
+
 .footer {
-  padding: 20px 0;
-}
-
-.footer .btn-primary {
-  margin-top: 10px;
-}
-
-.footer .col-md-4 h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-}
-
-.footer .col-md-4 ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.footer .col-md-4 ul li {
-  margin-bottom: 10px;
-}
-
-.footer .col-md-4 ul li a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.footer .col-md-4 ul li a:hover {
-  text-decoration: underline;
-}
-
-/* 修改轮播图片中的文字样式 */
-.carousel-caption h5, .carousel-caption p {
-  text-align: center;
-  font-weight: bold;
-  font-size: 24px; /* 调整字体大小 */
-}
-
-/* 修改底栏内容样式 */
-.footer {
-  background-color: #343a40;
+  background-color: var(--primary-color);
   color: #fff;
   padding: 60px 0;
-  text-align: center; /* 确保底栏内容居中 */
+  text-align: center;
+}
+
+.footer h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
 }
 
 .footer p {
@@ -126,4 +115,49 @@ body {
 
 .footer i {
   margin-right: 5px;
+}
+
+.footer .fab {
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer .fab:hover {
+  color: var(--secondary-color);
+}
+
+
+.footer .col-md-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer .col-md-4 a {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+@media (max-width: 767px) {
+  .carousel-caption h5 {
+    font-size: 2rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1.2rem;
+  }
+
+  .footer .fab {
+    margin: 0 5px;
+  }
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.social-icons a {
+  margin: 0 10px;
 }

@@ -1,12 +1,24 @@
+# - name: Home
+#   link: /Introdction_web/index.html
+# - name: Products
+#   link: /Introdction_web/products.html
+# - name: Culture
+#   link: /Introdction_web/culture.html
+# - name: Careers
+#   link: /Introdction_web/careers.html
+# - name: About Us
+#   link: /Introdction_web/about.html
+# - name: Contact
+  # link: /Introdction_web/contact.html
 - name: Home
-  link: /Introdction_web/index.html
+  link: /index.html
 - name: Products
-  link: /Introdction_web/products.html
+  link: /products.html
 - name: Culture
-  link: /Introdction_web/culture.html
+  link: /culture.html
 - name: Careers
-  link: /Introdction_web/careers.html
+  link: /careers.html
 - name: About Us
-  link: /Introdction_web/about.html
+  link: /about.html
 - name: Contact
-  link: /Introdction_web/contact.html
+  link: /contact.html
