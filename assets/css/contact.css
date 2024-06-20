@@ -19,36 +19,33 @@
     color: #c0c0c0 !important;
 }
 
-/* 基本布局样式 */
-html, body {
-    font-family: 'Arial', sans-serif;
-    background: #f4f4f4;
-    margin: 0;
-    padding: 0;
+/* 欢迎区域样式 */
+.welcome-area {
+    position: relative;
     width: 100%;
-    height: 100%;
-    overflow-x: hidden; /* 防止横向滚动 */
-}
-
-/* 页面标题区域样式 */
-.page-heading {
-    background: #fff;
-    padding: 0;  /* 移除padding以允许图片完全铺满 */
-    border-bottom: 1px solid #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: auto; /* 根据实际图片高度调整 */
+  }
+  
+  .welcome-area img.full-width {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .welcome-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 64px; /* 调整字体大小以适应设计 */
+    font-family: 'Great Vibes', cursive; /* 这是一种艺术字体的示例，可以更换 */
     text-align: center;
-    width: 100%;  /* 确保宽度为100% */
-    overflow: hidden; /* 防止任何溢出 */
-}
+  }
+  
+  /* 载入Google字体库中的艺术字体 */
+  @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
-.page-heading img {
-    display: block;  /* 确保图片不会有额外的空间 */
-    width: 100%;  /* 宽度设置为100% */
-    height: auto;  /* 高度自动调整以保持纵横比 */
-    max-height: none;  /* 移除最大高度限制 */
-}
 
 /* 内容文本样式 */
 .inner-content {
