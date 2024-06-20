@@ -1,28 +1,3 @@
-/* styles.css */
-
-body {
-  font-family: 'Arial', sans-serif;
-}
-
-.navbar {
-  background-color: #343a40 !important;
-}
-
-.navbar-brand {
-  font-family: 'Georgia', serif;
-  font-size: 1.75rem;
-  font-weight: bold;
-  color: #ffffff !important;
-}
-
-.navbar-nav .nav-link {
-  color: #ffffff !important;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #c0c0c0 !important;
-}
-
 css
 复制代码
 /* 基本布局样式 */
@@ -33,22 +8,61 @@ body {
     padding: 0;
 }
 
-/* 页面标题区域样式 */
-.page-heading {
-    background: #fff;
-    padding: 20px 0;
-    border-bottom: 1px solid #ccc;
+/* 导航条样式 */
+.navbar {
+    background-color: #343a40 !important;
 }
 
-.page-heading .inner-content {
-    text-align: center;
-    padding: 20px;
+.navbar-brand {
+    font-family: 'Georgia', serif;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #ffffff !important;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #c0c0c0 !important;
+}
+
+/* 页面标题区域样式 */
+.page-heading {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
 .page-heading img {
-    margin-top: 20px;
-    max-height: 200px; /* 控制图片高度 */
-    width: auto; /* 图片宽度自适应 */
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.inner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+.inner-content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0.5em 0;
+}
+
+.inner-content span {
+    font-size: 1.5rem;
+    font-style: italic;
+    display: block;
+    margin-top: 0.5em;
 }
 
 /* 联系区域样式 */
@@ -103,8 +117,6 @@ button.main-dark-button:hover {
     background-color: #0056b3;
 }
 
-
-
 /* 媒体查询，确保响应式布局 */
 @media (max-width: 768px) {
     .page-heading .inner-content,
@@ -113,68 +125,41 @@ button.main-dark-button:hover {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 修改底栏内容样式 */
+/* 底部页脚样式 */
 .footer {
-  background-color: #343a40;
-  color: #fff;
-  padding: 60px 0;
-  text-align: center; /* 确保底栏内容居中 */
+    background-color: #343a40;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
 }
 
 .footer p {
-  margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 .footer i {
-  margin-right: 5px;
-}
-
-
-.footer {
-  padding: 20px 0;
-}
-
-.footer .btn-primary {
-  margin-top: 10px;
+    margin-right: 5px;
 }
 
 .footer .col-md-4 h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
 }
 
 .footer .col-md-4 ul {
-  list-style: none;
-  padding-left: 0;
+    list-style: none;
+    padding-left: 0;
 }
 
 .footer .col-md-4 ul li {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .footer .col-md-4 ul li a {
-  color: #ffffff;
-  text-decoration: none;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .footer .col-md-4 ul li a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
-
-
-
-
