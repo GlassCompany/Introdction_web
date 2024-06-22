@@ -44,8 +44,10 @@ body {
   transform: translate(-50%, -50%);
   color: white;
   font-size: 64px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
   /* 调整字体大小以适应设计 */
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Playfair Display', serif;
   /* 这是一种艺术字体的示例，可以更换 */
   text-align: center;
 }

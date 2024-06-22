@@ -1,63 +1,77 @@
-/* styles.css */
-
-body {
-  font-family: 'Arial', sans-serif;
+.welcome-area {
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
 }
 
-.navbar {
-  background-color: #343a40 !important;
+.welcome-area img {
+  width: 100%;
+  height: auto;
+  filter: brightness(70%);
 }
 
-.navbar-brand {
-  font-family: 'Georgia', serif;
-  font-size: 1.75rem;
+.welcome-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
   font-weight: bold;
-  color: #ffffff !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.navbar-nav .nav-link {
-  color: #ffffff !important;
+.welcome-description {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+  line-height: 1.5;
 }
 
-.navbar-nav .nav-link:hover {
-  color: #c0c0c0 !important;
+.card-custom {
+  margin-bottom: 30px;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
 }
 
+.card-custom:hover {
+  transform: translateY(-10px);
+}
 
+.card-img-custom {
+  height: 250px;
+  object-fit: cover;
+}
 
-/* 修改底栏内容样式 */
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card-text,
+.pre-text {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.pre-text {
+  white-space: pre-wrap;
+  font-family: Arial, sans-serif;
+}
+
 .footer {
-  background-color: #343a40;
-  color: #fff;
-  padding: 60px 0;
-  text-align: center; /* 确保底栏内容居中 */
+  padding: 20px 0;
 }
-
-.footer p {
-  margin-bottom: 5px;
-}
-
-.footer i {
-  margin-right: 5px;
-}
-
-/* 显示在卡片右侧 */
-.container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.card {
-  border: 1px solid #ccc;
-  padding: 20px;
-  justify-content: center; /* 水平居中 */
-  align-items: center; /* 垂直居中 */
-}
-
-.container {
-  display: flex;
-  justify-content: center; /* 水平居中 */
-  align-items: center; /* 垂直居中 */
-  height: 100vh; /* 设置高度为视口高度，实现垂直居中 */
-}
-
