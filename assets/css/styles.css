@@ -1,0 +1,163 @@
+/* 定义全局变量 */
+:root {
+  --primary-color: #343a40;
+  --secondary-color: #c0c0c0;
+  --font-family-sans: 'Arial', sans-serif;
+  --font-family-serif: 'Georgia', serif;
+}
+
+body {
+  font-family: var(--font-family-sans);
+}
+
+.navbar {
+  background-color: var(--primary-color) !important;
+}
+
+.navbar-brand {
+  font-family: var(--font-family-serif);
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #ffffff !important;
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--secondary-color) !important;
+}
+
+.carousel-item {
+  height: 100vh;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20%;
+  text-align: center;
+  color: #fff;
+}
+
+.carousel-caption h5 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  font-size: 1.5rem;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.scroll-down i {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 450px; /* 增加卡片高度 */
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 250px; /* 增加图片高度 */
+}
+
+.card-body {
+  flex-grow: 1;
+}
+
+.footer {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.footer h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.footer p {
+  margin-bottom: 5px;
+}
+
+.footer i {
+  margin-right: 5px;
+}
+
+.footer .fab {
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer .fab:hover {
+  color: var(--secondary-color);
+}
+
+
+.footer .col-md-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer .col-md-4 a {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+@media (max-width: 767px) {
+  .carousel-caption h5 {
+    font-size: 2rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1.2rem;
+  }
+
+  .footer .fab {
+    margin: 0 5px;
+  }
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}

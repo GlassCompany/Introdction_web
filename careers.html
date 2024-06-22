@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Careers</title>
+  <link rel="stylesheet" href="https://cdn.staticfile.net/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script src="https://cdn.staticfile.net/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.net/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</head>
+
+
+<body>
+  <!-- _includes/navigation.html -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Celestial Glass Artisans</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/Introdction_web/index.html">Home</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/Introdction_web/products.html">Products</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/Introdction_web/culture.html">Culture</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/Introdction_web/careers.html">Careers</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/Introdction_web/about.html">About Us</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/Introdction_web/contact.html">Contact</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>招聘信息</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .header {
+            position: relative;
+            height: 50vh;
+            background-image: url('./assets/img/img003.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            filter: brightness(60%);
+        }
+
+        .header h1 {
+            font-size: 48px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-family: 'Brush Script MT', cursive;
+        }
+
+        .search-bar {
+            margin-top: -30px;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .job-card {
+            background-color: #ffffff;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .job-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .job-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .job-card .card-body {
+            padding: 10px;
+        }
+
+        .job-card .card-title {
+            font-size: 24px;
+            color: #007bff;
+            margin-top: 10px;
+        }
+
+        .job-card .card-text {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004494;
+        }
+
+        .modal-header {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .modal-body ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Glass Factory Job Openings</h1>
+    </div>
+
+    <div class="container">
+        <div class="search-bar text-center">
+            <input type="text" class="form-control form-control-lg" id="search" placeholder="Search for jobs">
+        </div>
+
+        <div class="row" id="job-list">
+            <!-- Job listings will be inserted here -->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const jobs = [
+            {
+                title: '生产操作员',
+                description: '我们正在寻找生产操作员加入我们的玻璃厂团队。',
+                skills: ['具备玻璃制造相关经验者优先', '能适应轮班工作制度', '有团队合作精神'],
+                email: 'hr@example.com',
+                img: './assets/img/img006.jpg'
+            },
+            {
+                title: '设备维修员',
+                description: '我们需要一位有设备维修经验的维修员加入我们的团队。',
+                skills: ['熟悉工业设备维修和保养', '有电工证或相关资格证书者优先', '具备故障诊断和问题解决能力'],
+                email: 'careers@example.com',
+                img: './assets/img/img007.jpg'
+            },
+            {
+                title: '质检员',
+                description: '我们正在寻找一名质检员来确保产品质量。',
+                skills: ['熟悉玻璃产品质量标准', '有质检相关工作经验', '具备细致的工作态度和责任心'],
+                email: 'hr@example.com',
+                img: './assets/img/img014.jpg'
+            },
+            {
+                title: '物流主管',
+                description: '我们需要一位有经验的物流主管来管理我们的物流和供应链。',
+                skills: ['有物流管理经验', '熟悉物流和供应链管理系统', '具备良好的沟通和协调能力'],
+                email: 'logistics@example.com',
+                img: './assets/img/img009.jpg'
+            },
+            {
+                title: '仓库管理员',
+                description: '我们正在寻找一名仓库管理员来负责仓库日常运作。',
+                skills: ['有仓库管理经验', '熟练使用仓库管理软件', '具备良好的组织和管理能力'],
+                email: 'warehouse@example.com',
+                img: './assets/img/img010.jpg'
+            },
+            {
+                title: '安全员',
+                description: '我们需要一名安全员来确保工作场所的安全。',
+                skills: ['熟悉安全生产规范和法律法规', '有安全员资格证书者优先', '具备应急处理和风险评估能力'],
+                email: 'safety@example.com',
+                img: './assets/img/img011.jpg'
+            },
+            {
+                title: '采购员',
+                description: '我们正在寻找一名采购员来负责原材料的采购工作。',
+                skills: ['有采购工作经验', '熟悉采购流程和供应商管理', '具备良好的谈判和沟通能力'],
+                email: 'procurement@example.com',
+                img: './assets/img/img012.jpg'
+            },
+            {
+                title: '行政助理',
+                description: '我们需要一名行政助理来协助日常行政工作。',
+                skills: ['有行政管理经验', '熟练使用办公软件', '具备良好的沟通和协调能力'],
+                email: 'admin@example.com',
+                img: './assets/img/img013.jpg'
+            }
+        ];
+
+        function displayJobs(jobList) {
+            const jobListElement = document.getElementById('job-list');
+            jobListElement.innerHTML = '';
+            jobList.forEach((job, index) => {
+                const jobElement = document.createElement('div');
+                jobElement.className = 'col-md-4';
+                jobElement.innerHTML = `
+                    <div class="card job-card">
+                        <img src="${job.img}" alt="${job.title}">
+                        <div class="card-body">
+                            <h5 class="card-title">${job.title}</h5>
+                            <p class="card-text">${job.description}</p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#jobModal${index}">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="modal fade" id="jobModal${index}" tabindex="-1" aria-labelledby="jobModalLabel${index}" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="jobModalLabel${index}">${job.title}</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>${job.description}</p>
+                                    <p><strong>要求技能：</strong></p>
+                                    <ul>${job.skills.map(skill => `<li>${skill}</li>`).join('')}</ul>
+                                    <p><strong>联系邮箱:</strong> <a href="mailto:${job.email}">${job.email}</a></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                jobListElement.appendChild(jobElement);
+            });
+        }
+
+        document.getElementById('search').addEventListener('input', (event) => {
+            const searchTerm = event.target.value.toLowerCase();
+            const filteredJobs = jobs.filter(job => job.title.toLowerCase().includes(searchTerm));
+            displayJobs(filteredJobs);
+        });
+
+        displayJobs(jobs);
+    </script>
+
+</body>
+
+</html>
+
+</body>
+
+</html>
